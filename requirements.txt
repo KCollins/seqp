@@ -2,3 +2,4 @@ pandas
 morse_talk
 numpy
 matplotlib
+scipy
