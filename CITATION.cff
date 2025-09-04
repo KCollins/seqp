@@ -1,0 +1,78 @@
+abstract: '<p>Test waveform and code for the HamSCI Solar Eclipse QSO Party.&nbsp;</p>
+
+  <p>&nbsp;</p>
+
+  <p>Version 2: The following changes were made:</p>
+
+  <ol>
+
+  <li><strong>Removed downchirps.</strong></li>
+
+  <li><strong>Eliminate both instances of the fastest 100 Hz/ms chirps. </strong>In
+  V1, these comprise the first group of 5 chirps and the last string of concatenated
+  up/down chirps. There is now ample evidence of problems with the fast chirp rate
+  in radios with both analog and digital audio processing. The fast chirp evidently
+  gets distorted by the multi-pole audio filters used to shape the radio&rsquo;s passband.
+  In both WA5FRF''s original hand-processed data and the automated processing done
+  by students at the University of Scranton, the 100 Hz/ms chirp rate gave very different
+  results than the slower 50, 25, and 10 Hz/ms rates. Not only did the 100 Hz/ms traces
+  not track with the others but they distorted the composite average when included.</li>
+
+  <li><strong>Add another group of 1 cycle audio pulses with a reduced center frequency
+  of 1000 Hz.&nbsp;</strong>There is evidence the present 1500 Hz center frequency
+  causes a ringing problem similar to the distortion noted with the fastest chirp
+  rate.</li>
+
+  <li><strong>Preface and conclude the science payload with a ~&frac12; second burst
+  of a 1000 Hz sine wave tone.&nbsp;</strong>This will help with timing for automated
+  data extraction and also serves to confirm the sample rate was correctly interpreted.<br><br></li>
+
+  </ol>
+
+  <p>The full signal is composed here: https://github.com/KCollins/seqp&nbsp;</p>
+
+  <p>V2 of the final signal therefore consists of:&nbsp;</p>
+
+  <ol>
+
+  <li>TEST TEST TEST DE &lt;callsign&gt; &lt;grid-square&gt; in Morse code</li>
+
+  <li>A &frac12; second 1000 Hz tone burst</li>
+
+  <li>A 2-second long, non-repeating pseudorandom noise burst</li>
+
+  <li>5 repetitions of a 1 cycle audio burst at 1000 Hz center frequency</li>
+
+  <li>5 repetitions of a 1 cycle audio burst at 1500 Hz center frequency</li>
+
+  <li>5 repetitions of a 50 Hz/ms chirp. (0-5000 Hz in 100 ms)</li>
+
+  <li>5 repetitions of a 25 Hz/ms chirp. (0-5000 Hz in 200 ms)</li>
+
+  <li>5 repetitions of a 10 Hz/ms chirp. (0-5000 Hz in 500 ms)</li>
+
+  <li>Another 2 second PN burst identical to 3.</li>
+
+  <li>Another &frac12; second 1000 Hz tone burst.</li>
+
+  </ol>'
+authors:
+- affiliation: HamSCI
+  family-names: Cerwin
+  given-names: Steve
+  orcid: 0000-0002-2045-9172
+- affiliation: Space Science Institute
+  family-names: Collins
+  given-names: Kristina
+  orcid: 0000-0002-3816-1948
+- affiliation: Case Western Reserve University
+  family-names: Rodriguez
+  given-names: Eddie
+  orcid: 0009-0001-0156-8074
+cff-version: 1.2.0
+date-released: '2024-03-14'
+doi: 10.5281/zenodo.10822389
+license:
+- cc-by-4.0
+message: If you use this work, please cite it using the metadata from this file.
+title: Solar Eclipse QSO Party Test Waveform
